@@ -38,7 +38,15 @@ See [the GTA VI research horizon](docs/gta-vi-horizon.md).
 
 ## Project map
 
+- [Engineering blueprint](docs/engineering-blueprint.md) — proposed modules, contracts, 12 iterations and risk register
 - [Architecture proposal](docs/architecture.md) — boundaries, components, and assumptions
+- [Loader and execution](docs/loader-and-execution.md) — PE/COFF, memory mapping and ABI plans
+- [Runtime bridge](docs/runtime-bridge.md) — host services, scheduling, handles and asynchronous I/O
+- [Graphics translation](docs/graphics-pipeline.md) — proposed D3D12.X research and render IR
+- [Virtual platform](docs/virtual-platform.md) — filesystem, input, audio and lifecycle
+- [Verification matrix](docs/verification-matrix.md) — proof standards and test gates
+- [GTA VI compatibility matrix](docs/gta-vi-compatibility-matrix.md) — long-term compatibility research objectives
+- [PEProbe prototype](prototypes/README.md) — first read-only research utility with synthetic-fixture CI
 - [Platform overview](docs/platform-overview.md) — terminology and known technical differences
 - [Roadmap](ROADMAP.md) — milestones and criteria for evidence
 - [Research log](docs/research-log.md) — dated, sourced notes
