@@ -1,0 +1,29 @@
+name: PEProbe — Python research tests
+
+on:
+  push:
+    paths:
+      - "prototypes/**"
+      - ".github/workflows/peprobe.yml"
+  pull_request:
+    paths:
+      - "prototypes/**"
+      - ".github/workflows/peprobe.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  peprobe-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate Python syntax
+        run: python -m compileall -q prototypes
+      - name: Test synthetic PE fixtures
+        run: python -m unittest discover -s prototypes -p "test_*.py" -v
